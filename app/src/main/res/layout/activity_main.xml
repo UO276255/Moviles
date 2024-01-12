@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".Activities.MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif-black"
+        android:text="Destinos Recomendados"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        android:textSize="32sp" />
+
+    <SearchView
+        android:id="@+id/buscador"
+        android:layout_width="247dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:orientation="horizontal"
+        android:rotationX="-8" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/botonFiltros"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/textView2"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_toStartOf="@id/buscador"
+        android:layout_toLeftOf="@id/buscador"
+        android:background="#40200B"
+        android:clickable="true"
+        android:tint="#B61919"
+        app:backgroundTint="@color/colorNavIcon"
+        app:srcCompat="@drawable/filtro" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="413dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@id/buscador"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="114dp"
+        android:textAlignment="center" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@id/recyclerView">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:background="#40200B"
+            android:text="Travel Prof"
+            android:textAlignment="center"
+            android:textColor="#FBFAFA"
+            android:textSize="48sp" />
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:background="#40200B"
+        android:textAlignment="center"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemRippleColor="@color/colorPrimary"
+        app:itemTextColor="#FAFAFA"
+        app:menu="@menu/bottom_navigation_menu"
+        app:theme="@style/BottomNavigationViewStyle" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_container"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="161dp"
+        android:layout_marginBottom="23dp"
+        android:alpha="0.1"
+        app:srcCompat="@drawable/icon_no_background" />
+
+    <Button
+        android:id="@+id/buttonMostarTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="203dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginRight="149dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTintMode="add"
+        android:text="Mostar todos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
+
+    <!-- Resto del contenido -->
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:paddingStart="10dp">
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        tools:srcCompat="@drawable/img" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/destino_rec"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:paddingStart="16dp"
+            android:text="@string/destino_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:paddingStart="20dp"
+            android:text="@string/destino_description"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

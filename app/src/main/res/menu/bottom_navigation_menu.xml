@@ -1,0 +1,16 @@
+<!-- bottom_navigation_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_travel_prof"
+        android:checkable="false"
+        android:checked="true"
+        android:title="TravelProf" />
+    <item
+        android:id="@+id/navigation_favs"
+        android:checked="true"
+        android:title="Favoritos" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:checked="true"
+        android:title="Mi perfil" />
+</menu>
